@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-pastel-pink: #F9D5E5;
+    --color-pastel-blue: #D5EAF9;
+    --color-pastel-lavender: #E5D5F9;
+    --color-accent-pink: #F06292;
+    --color-accent-blue: #42A5F5;
+    --color-accent-lavender: #9575CD;
+    --color-brand-light: #FDF6FA;
+    --color-brand-dark: #4A3050;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Noto Sans KR', system-ui, sans-serif;
+    background-color: var(--color-brand-light);
+    color: var(--color-brand-dark);
+    min-height: 100vh;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-accent-pink text-white px-6 py-2.5 rounded-full font-medium hover:opacity-90 transition-opacity;
+  }
+
+  .btn-outline {
+    @apply border-2 border-accent-pink text-accent-pink px-6 py-2.5 rounded-full font-medium hover:bg-accent-pink hover:text-white transition-colors;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow overflow-hidden;
+  }
+
+  .section-title {
+    @apply text-2xl md:text-3xl font-bold text-brand-dark text-center mb-2;
+  }
+
+  .section-subtitle {
+    @apply text-sm text-gray-400 text-center mb-8;
+  }
+}
