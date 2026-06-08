@@ -12,6 +12,13 @@ dist
 dist-ssr
 *.local
 
+# 압축 원본 파일
+*.zip
+
+# 이미지 중복 폴더 (public/images 에 복사본 있음)
+src/assets/과일/
+src/assets/빵/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
